@@ -350,8 +350,9 @@ MigrationBackup/
 .ionide/
 
 # MH
-/Properties/launchSettings.json
+/Properties/
 /appsettings.Development.json
 /package-lock.json
 .vscode/
 .config/dotnet-tools.json
+
