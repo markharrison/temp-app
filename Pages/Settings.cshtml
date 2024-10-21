@@ -1,0 +1,55 @@
+﻿@page
+@model Pathinox.Pages.SettingsModel
+@{
+    ViewData["Title"] = "Settings";
+}
+<h3>Settings</h3>
+
+<form method="post">
+    <div>
+        Name: <input type="text" id="name" name="Name" value="@Model.Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <br />
+    <div>
+        Preferred Color:
+        <select id="color" name="Color">
+            <option value="Red" selected="@(Model.Color == "Red")">Red</option>
+            <option value="Green" selected="@(Model.Color == "Green")">Green</option>
+            <option value="Blue" selected="@(Model.Color == "Blue")">Blue</option>
+            <option value="Yellow" selected="@(Model.Color == "Yellow")">Yellow</option>
+            <option value="Orange" selected="@(Model.Color == "Orange")">Orange</option>
+            <option value="Purple" selected="@(Model.Color == "Purple")">Purple</option>
+        </select>
+        <span asp-validation-for="Color" class="text-danger"></span>
+    </div>
+    <br /> 
+    <div>
+        Alternative Color:
+        <select id="colorAlt" name="ColorAlt">
+            <option value="Red" selected="@(Model.ColorAlt == "Red")">Red</option>
+            <option value="Green" selected="@(Model.ColorAlt == "Green")">Green</option>
+            <option value="Blue" selected="@(Model.ColorAlt == "Blue")">Blue</option>
+            <option value="Yellow" selected="@(Model.ColorAlt == "Yellow")">Yellow</option>
+            <option value="Orange" selected="@(Model.ColorAlt == "Orange")">Orange</option>
+            <option value="Purple" selected="@(Model.ColorAlt == "Purple")">Purple</option>
+        </select>
+        <span asp-validation-for="ColorAlt" class="text-danger"></span>
+    </div>
+    <br />
+    <div>
+        Theme:
+        <select id="theme" name="Theme">
+            <option value="Light" selected="@(Model.Theme == "Light")">Light</option>
+            <option value="Dark" selected="@(Model.Theme == "Dark")">Dark</option>
+        </select>
+        <span asp-validation-for="Theme" class="text-danger"></span>
+    </div>
+    <br />
+
+    <button type="submit">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

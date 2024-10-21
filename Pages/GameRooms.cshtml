@@ -1,0 +1,23 @@
+﻿@page
+@model Pathinox.Pages.GameRoomsModel
+@{
+    ViewData["Title"] = "GameRooms";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>GameRooms</title>
+    <style>
+        body {
+            font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"sans-serif";
+        }
+    </style>
+</head>
+<body>
+    <h3>GameRooms</h3>
+    @Html.Raw(Model.strHtml)
+    <hr />
+    <a href="/">Home</a>
+</body>
+</html>

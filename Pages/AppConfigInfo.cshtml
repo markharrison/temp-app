@@ -1,0 +1,28 @@
+﻿@page
+@model Pathinox.Pages.AppConfigInfoModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        if (("; " + document.cookie).split("; " + "pxtheme" + "=").pop().split(";").shift() === "Light") {
+            document.getElementsByTagName('HTML')[0].setAttribute("data-bs-theme", "light");
+        }
+    </script>
+    <meta charset="utf-8" />
+    <title>AppConfigInfo</title>
+    <style>
+        body {
+            font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"sans-serif";
+        }
+    </style>
+</head>
+<body>
+    <h1>AppConfigInfo</h1>
+    @Html.Raw(Model.strAppConfigInfoHtml)
+    <hr />
+    <a href="/">Home</a>
+</body>
+</html>

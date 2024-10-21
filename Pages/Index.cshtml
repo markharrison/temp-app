@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="idGameDiv" style="display:none;">
+    @* <button id="idStateUpdateBtn">0</button> *@
+    <div id="idBoardDiv" style=""></div>
+    <br />
+</div>
+<div id="idButtonDiv">
+    <input id="idCodeInput" type="text" placeholder="Enter Game Code" value="@Model.JoinValue" />
+    <button id="idStartBtn" autofocus>Connect</button>
+    <button id="idCancelBtn" style="display:none;">Cancel</button>
+    <button id="idRestartBtn" style="display:none;">Restart</button>
+    <br />
+    <br />
+</div>
+<div id="idGameStatusDiv">Disconnected</div>
+<br />
+<div id="idMsgDiv" style="display:none;">
+    <input id="idMsgInput" type="text" placeholder="Enter message" size="34" />
+    <button id="idMsgBtn">Send</button>
+</div>
+<div id="idDebugDiv" style="display:none;"></div>
+<div id="idToaster" style="background: transparent; position: fixed; bottom: 45px; right: 5px; z-index: 2000; width: 300px;"></div>
+
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0/signalr.min.js" defer></script>
+    <script src="~/js/pathinox.js" defer></script>
+    <script src="~/js/indexpage.js" defer></script>
+}
+
